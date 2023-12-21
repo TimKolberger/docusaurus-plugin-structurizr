@@ -1,5 +1,14 @@
 # docusaurus-plugin-structurizr
 
+## 0.2.0
+
+### Minor Changes
+
+- [#8](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/8)
+  [`e478bf1`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/e478bf1f58179acd64ee99a7433fa06fd3e62922)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Removed undocumented and not working
+  option `output`
+
 ## 0.1.1
 
 ### Patch Changes
