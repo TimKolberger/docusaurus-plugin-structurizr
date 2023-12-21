@@ -2,11 +2,57 @@ import type { OptionValidationContext, PluginOptions } from '@docusaurus/types'
 import { Joi } from '@docusaurus/utils-validation'
 
 export type DocusaurusPluginStructurizrOptions = PluginOptions & {
+  /**
+   * Whether the plugin is enabled or not
+   * @example Disable the plugin in CI
+   * ```js
+   * {
+   *   enabled: !process.env.CI
+   * }
+   * ```
+   * @default true
+   */
   enabled?: boolean
+  /**
+   * The paths to search in for diagrams. E.g. all documentation directories
+   * @default ['docs']
+   */
   paths?: string[]
-  format?: 'mermaid' | 'plantuml'
+  /**
+   * The diagram format to use
+   * @see https://docs.structurizr.com/cli/export
+   * @default 'mermaid'
+   */
+  format?:
+    | 'mermaid'
+    | 'plantuml'
+    | 'plantuml/structurizr'
+    | 'plantuml/c4plantuml'
+    | 'dot'
+    | 'd2'
+    | 'json'
+    | 'ilograph'
+    | 'websequencediagrams'
+    | (string & {})
+  /**
+   * The executor to use when generating diagrams
+   * @default 'auto'
+   */
   executor?: 'docker' | 'cli' | 'auto'
+  /**
+   * The docker image to use when using the docker executor
+   * @default 'structurizr/cli'
+   */
   dockerImage?: string
+  /**
+   * Relative or absolute path to an output directory
+   * @default ''
+   */
+  output?: string
+  /**
+   * Additional arguments to pass to the structurizr CLI
+   * @default ''
+   */
   additionalStructurizrArgs?: string
 }
 
@@ -16,7 +62,7 @@ export type InternalDocusaurusPluginStructurizrOptions =
 const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   enabled: Joi.boolean().default(true),
   paths: Joi.array().items(Joi.string()).default(['docs']),
-  format: Joi.string().valid('mermaid', 'plantuml').default('mermaid'),
+  format: Joi.string().default('mermaid'),
   executor: Joi.string().valid('docker', 'cli', 'auto').default('auto'),
   dockerImage: Joi.string().default('structurizr/cli'),
   additionalStructurizrArgs: Joi.string().default(''),
