@@ -111,7 +111,16 @@ const config: Config = {
       },
     ],
   ],
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    /** @docs https://github.com/easyops-cn/docusaurus-search-local */
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+      },
+    ],
+    '@docusaurus/theme-mermaid',
+  ],
   markdown: {
     mermaid: true,
   },
