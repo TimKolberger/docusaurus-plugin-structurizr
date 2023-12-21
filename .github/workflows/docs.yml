@@ -18,7 +18,6 @@ jobs:
       id-token: write # to verify the deployment originates from an appropriate source
       actions: read # to download an artifact uploaded by `actions/upload-pages-artifact@v3`
 
-
     steps:
       - uses: actions/checkout@v4
 

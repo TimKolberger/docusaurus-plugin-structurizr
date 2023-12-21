@@ -108,7 +108,6 @@ const config: Config = {
             to: '/docs/',
           },
         ],
-
       },
     ],
   ],
