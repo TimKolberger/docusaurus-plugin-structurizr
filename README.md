@@ -1,4 +1,9 @@
-# Docusaurus Structurizr Plugin
+<h1 align="center">Docusaurus Plugin Structurizr</h1>
+
+<p align="center">
+  <img alt="NPM" src="https://img.shields.io/npm/l/docusaurus-plugin-structurizr?style=for-the-badge">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/TimKolberger/docusaurus-plugin-structurizr?logo=github&style=for-the-badge">
+</p>
 
 This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams in your
 [Docusaurus](https://docusaurus.io/) documentation.

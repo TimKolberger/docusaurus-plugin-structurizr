@@ -1,4 +1,4 @@
-# Docusaurus Structurizr Plugin
+# Docusaurus Plugin Structurizr
 
 This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams in your
 [Docusaurus](https://docusaurus.io/) documentation.

@@ -4,7 +4,7 @@ import type { DocusaurusPluginStructurizrOptions } from 'docusaurus-plugin-struc
 import { themes as prismThemes } from 'prism-react-renderer'
 
 const config: Config = {
-  title: 'Docusaurus Structurizr Plugin',
+  title: 'Docusaurus Plugin Structurizr',
   tagline: 'Use structurizr DSL files to generate diagrams in your Docusaurus site.',
   favicon: 'img/favicon.ico',
 
@@ -45,9 +45,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Docusaurus Structurizr Plugin',
+      title: 'Docusaurus Plugin Structurizr',
       logo: {
-        alt: 'Docusaurus Structurizr Plugin Logo',
+        alt: 'Docusaurus Plugin Structurizr Logo',
         src: 'img/logo.svg',
       },
       items: [
