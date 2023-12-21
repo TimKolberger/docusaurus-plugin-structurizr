@@ -59,6 +59,10 @@ importers:
         version: 3.0.1(react-dom@18.2.0)(react@18.2.0)
 
   packages/docusaurus-plugin-structurizr:
+    dependencies:
+      joi:
+        specifier: ^17.11.0
+        version: 17.11.0
     devDependencies:
       '@dps/eslint-config':
         specifier: workspace:*
