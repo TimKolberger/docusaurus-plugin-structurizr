@@ -1,9 +1,16 @@
 {
-  "name": "@repo/typescript-config",
+  "name": "@dps/typescript-config",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "lint": "concurrently pnpm:lint:*",
+    "lint:format": "prettier --check ."
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2"
   }
 }
