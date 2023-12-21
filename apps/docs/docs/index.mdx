@@ -15,7 +15,7 @@ Install `structurizr-cli` or `docker` on your machine. See
 Add the plugin to your Docusaurus project:
 
 ```bash
-npm install -D docusaurus-plugin-structurizr
+npm install -D docusaurus-plugin-structurizr @docusaurus/theme-mermaid
 ```
 
 Add the plugin to your `docusaurus.config.js`:
@@ -32,11 +32,18 @@ export default {
         paths: ['docs'],
         format: 'mermaid', // "mermaid" | "plantuml" | <structurizr-cli format: https://docs.structurizr.com/cli/export>
         executor: 'auto', // "docker" | "cli" | "auto",
-        dockerImage: 'structurizr/cli',
+        dockerImage: 'structurizr/cli', // see https://hub.docker.com/r/structurizr/cli
         additionalStructurizrArgs: undefined, // string
       },
     ],
   ],
+
+  // to use mermaid diagrams in your markdown files install the official mermaid theme
+  // see https://docusaurus.io/docs/next/api/themes/@docusaurus/theme-mermaid
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+  },
 }
 ```
 
@@ -49,9 +56,9 @@ Import the diagram in your markdown file using the `raw-loader`, see
 [importing code snippets in Docusaurus](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets)
 for more information.
 
-```md
-import awsMermaid from '!!raw-loader!./structurizr-AmazonWebServicesDeployment.mmd' import Mermaid
-from '@theme/Mermaid'
+```mdx
+import awsMermaid from '!!raw-loader!./structurizr-AmazonWebServicesDeployment.mmd'
+import Mermaid from '@theme/Mermaid'
 
 <Mermaid value={awsMermaid} />
 ```

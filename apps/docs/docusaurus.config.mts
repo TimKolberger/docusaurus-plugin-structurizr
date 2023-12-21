@@ -92,7 +92,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies ThemeConfig,
-  themes: ['@docusaurus/theme-mermaid'],
   plugins: [
     [
       'docusaurus-plugin-structurizr',
@@ -101,6 +100,7 @@ const config: Config = {
       } satisfies DocusaurusPluginStructurizrOptions,
     ],
   ],
+  themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
   },
