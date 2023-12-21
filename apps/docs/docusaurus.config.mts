@@ -99,6 +99,18 @@ const config: Config = {
         enabled: !process.env.CI,
       } satisfies DocusaurusPluginStructurizrOptions,
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/',
+            to: '/docs/',
+          },
+        ],
+
+      },
+    ],
   ],
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
