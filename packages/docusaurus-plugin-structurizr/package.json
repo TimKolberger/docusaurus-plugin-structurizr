@@ -56,6 +56,6 @@
   },
   "dependencies": {
     "@docusaurus/utils-validation": "^3.0.1",
-    "globby": "^14.0.0"
+    "globby": "^11.1.0"
   }
 }

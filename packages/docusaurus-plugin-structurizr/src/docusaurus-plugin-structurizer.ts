@@ -1,5 +1,5 @@
 import type { LoadContext, Plugin } from '@docusaurus/types'
-import { globby } from 'globby'
+import globby from 'globby'
 import path from 'node:path'
 
 import { PLUGIN_NAME } from './globals.js'
