@@ -1,5 +1,30 @@
 # Docusaurus Plugin Structurizr
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/docusaurus-plugin-structurizr">
+    <img
+      alt="npm"
+      src="https://img.shields.io/npm/v/docusaurus-plugin-structurizr?style=for-the-badge"
+    />
+  </a>
+  <a href="https://github.com/TimKolberger/docusaurus-plugin-structurizr">
+    <img
+      alt="GitHub stars"
+      src="https://img.shields.io/github/stars/TimKolberger/docusaurus-plugin-structurizr?logo=github&style=for-the-badge"
+    />
+  </a>
+  <a href="https://github.com/TimKolberger/docusaurus-plugin-structurizr/blob/main/LICENSE.md">
+    <img
+      alt="NPM"
+      src="https://img.shields.io/npm/l/docusaurus-plugin-structurizr?style=for-the-badge"
+    />
+  </a>
+  <img
+    alt="GitHub Workflow Status (with event)"
+    src="https://img.shields.io/github/actions/workflow/status/TimKolberger/docusaurus-plugin-structurizr/release.yml?style=for-the-badge"
+  />
+</p>
+
 This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams in your
 [Docusaurus](https://docusaurus.io/) documentation.
 
