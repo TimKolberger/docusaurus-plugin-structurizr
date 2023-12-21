@@ -30,7 +30,9 @@ This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams i
 
 ## Installation
 
-> **Note**: This plugin requires `structurizr-cli` or `docker` to be installed on your machine!
+> [!NOTE]
+>
+> This plugin requires `structurizr-cli` or `docker` to be installed on your machine!
 >
 > See [Structurizr installation docs](https://docs.structurizr.com/cli/installation).
 
