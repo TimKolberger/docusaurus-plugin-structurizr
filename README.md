@@ -5,10 +5,12 @@ This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams i
 
 ## Installation
 
-Install `structurizr-cli` or `docker` on your machine. See
-[Structurizr installation docs](https://docs.structurizr.com/cli/installation).
+> **Note**: This plugin requires `structurizr-cli` or `docker` to be installed on your machine!
+>
+> See [Structurizr installation docs](https://docs.structurizr.com/cli/installation).
 
-Add the plugin to your Docusaurus project:
+Add the plugin to your Docusaurus project. If you want to use mermaid diagrams in your markdown
+files, you also need to install the official mermaid theme.
 
 ```bash
 npm install -D docusaurus-plugin-structurizr @docusaurus/theme-mermaid
@@ -34,8 +36,8 @@ export default {
     ],
   ],
 
-  // to use mermaid diagrams in your markdown files install the official mermaid theme
-  // see https://docusaurus.io/docs/next/api/themes/@docusaurus/theme-mermaid
+  // to use mermaid diagrams in your markdown files, install the official mermaid theme
+  // see https://docusaurus.io/docs/api/themes/@docusaurus/theme-mermaid
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
