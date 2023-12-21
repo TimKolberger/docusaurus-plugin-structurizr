@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@dps/eslint-config':
         specifier: workspace:*
-        version: link:packages/eslint-config
+        version: link:tooling/eslint-config
       '@dps/typescript-config':
         specifier: workspace:*
-        version: link:packages/typescript-config
+        version: link:tooling/typescript-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.1.1)
@@ -37,10 +37,10 @@ importers:
         version: 3.0.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@dps/eslint-config':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../tooling/eslint-config
       '@dps/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../tooling/typescript-config
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.0.0(@types/react@18.2.5)(react@18.2.0)
@@ -87,10 +87,10 @@ importers:
         version: 3.0.1(react-dom@18.2.0)(react@18.2.0)
       '@dps/eslint-config':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../../tooling/eslint-config
       '@dps/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../../tooling/typescript-config
       '@types/node':
         specifier: 20.10.5
         version: 20.10.5
@@ -104,7 +104,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/eslint-config:
+  tooling/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.11.0
@@ -128,7 +128,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/typescript-config:
+  tooling/typescript-config:
     devDependencies:
       concurrently:
         specifier: 8.2.2
@@ -3234,7 +3234,7 @@ packages:
       debug: 4.3.4
       eslint: 8.54.0
       graphemer: 1.4.0
-      ignore: 5.2.4
+      ignore: 5.3.0
       natural-compare: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.2(typescript@5.2.2)
