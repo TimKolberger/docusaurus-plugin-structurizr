@@ -43,14 +43,18 @@
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint . --max-warnings 0",
     "lint:format": "prettier --check .",
-    "lint:types": "tsc --noEmit"
+    "lint:types": "tsc --noEmit",
+    "test": "vitest",
+    "test:ci": "vitest --run --coverage"
   },
   "devDependencies": {
     "@docusaurus/types": "3.0.1",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@types/node": "20.10.5",
-    "typescript": "5.3.3"
+    "@vitest/coverage-v8": "1.1.0",
+    "typescript": "5.3.3",
+    "vitest": "1.1.0"
   },
   "dependencies": {
     "@docusaurus/utils-validation": "^3.0.1",

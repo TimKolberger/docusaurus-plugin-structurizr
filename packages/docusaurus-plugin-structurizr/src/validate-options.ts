@@ -45,11 +45,6 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
    */
   dockerImage?: string
   /**
-   * Relative or absolute path to an output directory
-   * @default ''
-   */
-  output?: string
-  /**
    * Additional arguments to pass to the structurizr CLI
    * @default ''
    */

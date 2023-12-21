@@ -1,10 +1,11 @@
 import type { LoadContext, Plugin } from '@docusaurus/types'
-import globby from 'globby'
 import path from 'node:path'
 
+import { detectExecutor } from './detect-executor.js'
+import { findFiles } from './find-files.js'
 import { PLUGIN_NAME } from './globals.js'
 import { logger } from './logger.js'
-import { detectExecutor, runStructurizr } from './run-structurizr.js'
+import { runStructurizr } from './run-structurizr.js'
 import type { InternalDocusaurusPluginStructurizrOptions } from './validate-options.js'
 
 /**
@@ -36,7 +37,7 @@ export async function docusaurusPluginStructurizr(
   return {
     name: PLUGIN_NAME,
     async loadContent() {
-      const files = await globby(contentPaths)
+      const files = await findFiles(contentPaths)
       const results = await Promise.allSettled(
         files.map((file) =>
           runStructurizr(file, {

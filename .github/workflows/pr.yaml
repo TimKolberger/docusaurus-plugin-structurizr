@@ -8,6 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      # Required to check out the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
 
@@ -16,6 +23,17 @@ jobs:
 
       - name: Run linters
         run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test:ci
+
+      - name: 'Report Coverage'
+        # Set if: always() to also generate the report if tests are failing
+        # Only works if you set `reportOnFailure: true` in your vite config
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          working-directory: packages/docusaurus-plugin-structurizr
 
       - name: Build all packages and docs
         run: pnpm build:docs

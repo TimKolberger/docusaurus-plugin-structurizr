@@ -12,6 +12,9 @@
     "lint": {
       "dependsOn": ["^build", "^lint"]
     },
+    "test:ci": {
+      "outputs": []
+    },
     "dev": {
       "cache": false,
       "persistent": true
