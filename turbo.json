@@ -3,7 +3,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".docusaurus/**", "dist", "build"]
+      "outputs": ["dist"]
+    },
+    "build:docs": {
+      "dependsOn": ["^build", "^build:docs"],
+      "outputs": [".docusaurus/**", "build"]
     },
     "lint": {
       "dependsOn": ["^lint"]
