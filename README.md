@@ -115,13 +115,15 @@ export default {
 
 ## Development
 
-This repository uses [turborepo](https://turbo.build/) and [pnpm](https://pnpm.io/) to manage the
-packages. To get started:
+This repository uses [turborepo](https://turbo.build/), [vitest](https://vitest.dev/) and
+[pnpm](https://pnpm.io/) to manage the packages. To get started:
 
 ```bash
 pnpm install
-pnpm dev       # to start watching the packages and start the example site
+pnpm dev          # to start watching the packages and start the example site
 
-pnpm run build # to build the plugin
-pnpm run docs  # to start the example site
+pnpm run build    # to build the plugin
+pnpm run test     # to watch the tests
+pnpm run test:ci  # to run the tests once with coverage
+pnpm run docs     # to start the example site
 ```

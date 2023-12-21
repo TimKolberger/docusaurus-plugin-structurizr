@@ -7,13 +7,17 @@
     },
     "build:docs": {
       "dependsOn": ["^build", "^build:docs"],
-      "outputs": [".docusaurus/**", "build"]
+      "outputs": [".docusaurus", "build"]
     },
     "lint": {
       "dependsOn": ["^build", "^lint"]
     },
     "test:ci": {
-      "outputs": []
+      "cache": false,
+      "outputs": ["coverage"]
+    },
+    "test": {
+      "cache": false
     },
     "dev": {
       "cache": false,

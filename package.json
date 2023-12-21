@@ -8,6 +8,7 @@
     "docs": "pnpm --filter @dps/docs run dev",
     "format": "prettier --write .",
     "lint": "turbo lint",
+    "test": "turbo test",
     "test:ci": "turbo test:ci",
     "prepare": "husky install",
     "release": "changeset publish",
