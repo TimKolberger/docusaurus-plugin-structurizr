@@ -17,6 +17,9 @@ jobs:
       - name: Run linters
         run: pnpm lint
 
+      - name: Run tests
+        run: pnpm test:ci
+
       - name: Build
         run: pnpm build
 

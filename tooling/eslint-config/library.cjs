@@ -26,6 +26,9 @@ module.exports = {
     'node_modules/',
     'dist/',
     'build/',
+    'coverage/',
+    'test/',
+    'vitest.config.ts',
   ],
   overrides: [
     {
