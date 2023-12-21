@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
-    "dev": "docusaurus start",
     "build:docs": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve"
+    "deploy": "docusaurus deploy",
+    "dev": "docusaurus start",
+    "docusaurus": "docusaurus",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:eslint": "eslint . --max-warnings 0",
+    "lint:format": "prettier --check .",
+    "lint:types": "tsc --noEmit",
+    "serve": "docusaurus serve",
+    "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",
@@ -27,9 +31,11 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/theme-classic": "3.0.1",
     "@docusaurus/tsconfig": "3.0.1",
     "@docusaurus/types": "3.0.1",
-    "raw-loader": "^4.0.2"
+    "@types/node": "20.10.5",
+    "raw-loader": "4.0.2"
   },
   "browserslist": {
     "production": [

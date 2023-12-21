@@ -4,6 +4,6 @@ module.exports = {
   extends: ['@dps/eslint-config/library.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.lint.json',
+    project: true,
   },
 }
