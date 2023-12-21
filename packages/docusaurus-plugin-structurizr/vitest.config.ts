@@ -8,6 +8,12 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['json-summary', 'json', 'lcov'],
       reportOnFailure: true,
+      thresholds: {
+        lines: 90,
+        branches: 90,
+        functions: 75,
+        statements: 90,
+      },
     },
     setupFiles: ['./test/setup-tests.ts'],
   },
