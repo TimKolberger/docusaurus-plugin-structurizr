@@ -1,5 +1,5 @@
 ---
-"docusaurus-plugin-structurizr": minor
+'docusaurus-plugin-structurizr': minor
 ---
 
 Initial release

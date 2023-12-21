@@ -4,8 +4,8 @@ sidebar_position: 1
 
 # Docusaurus Structurizr Plugin
 
-This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams
-in your [Docusaurus](https://docusaurus.io/) documentation.
+This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams in your
+[Docusaurus](https://docusaurus.io/) documentation.
 
 ## Installation
 
@@ -20,7 +20,7 @@ npm install -D docusaurus-plugin-structurizr
 
 Add the plugin to your `docusaurus.config.js`:
 
-```js
+```js title="docusaurus.config.js"
 export default {
   plugins: [
     [
@@ -42,30 +42,29 @@ export default {
 
 ## Usage
 
-The plugin will look for files with `.dsl` extension and will generate a diagram
-for each file. The diagram will be placed in the same directory.
+The plugin will look for files with `.dsl` extension and will generate a diagram for each file. The
+diagram will be placed in the same directory.
 
 Import the diagram in your markdown file using the `raw-loader`, see
 [importing code snippets in Docusaurus](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets)
 for more information.
 
-```jsx
-import awsMermaid from '!!raw-loader!./structurizr-AmazonWebServicesDeployment.mmd'
-import Mermaid from '@theme/Mermaid'
+```md
+import awsMermaid from '!!raw-loader!./structurizr-AmazonWebServicesDeployment.mmd' import Mermaid
+from '@theme/Mermaid'
 
-;<Mermaid value={awsMermaid} />
+<Mermaid value={awsMermaid} />
 ```
 
 ### CI environments
 
-If you want to use this plugin in your CI pipeline, you need to install
-`structurizr-cli` or `docker` on your CI machine.
+If you want to use this plugin in your CI pipeline, you need to install `structurizr-cli` or
+`docker` on your CI machine.
 
-If that is not possible, you can opt out of using the plugin in CI by setting
-the `enabled` option to `false`. Make sure to commit your generated diagrams to
-your repository.
+If that is not possible, you can opt out of using the plugin in CI by setting the `enabled` option
+to `false`. Make sure to commit your generated diagrams to your repository.
 
-```js
+```js title="docusaurus.config.js"
 export default {
   plugins: [
     [

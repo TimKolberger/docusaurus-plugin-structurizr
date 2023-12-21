@@ -37,6 +37,14 @@
       "^[./]"
     ],
     "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true
+    "importOrderSortSpecifiers": true,
+    "overrides": [
+      {
+        "files": "*.(md|mdx)",
+        "options": {
+          "proseWrap": "always"
+        }
+      }
+    ]
   }
 }
