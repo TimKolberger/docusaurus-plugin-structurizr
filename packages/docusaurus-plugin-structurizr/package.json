@@ -42,7 +42,7 @@
     "dev": "tsc --watch",
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint . --max-warnings 0",
-    "lint:format": "prettier --check --config ../../package.json .",
+    "lint:format": "prettier --check .",
     "lint:types": "tsc --noEmit"
   },
   "devDependencies": {
