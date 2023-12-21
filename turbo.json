@@ -10,7 +10,7 @@
       "outputs": [".docusaurus/**", "build"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^build", "^lint"]
     },
     "dev": {
       "cache": false,
