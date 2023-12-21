@@ -1,5 +1,6 @@
 import type { ThemeConfig } from '@docusaurus/preset-classic'
 import type { Config } from '@docusaurus/types'
+import type { DocusaurusPluginStructurizrOptions } from 'docusaurus-plugin-structurizr'
 import { themes as prismThemes } from 'prism-react-renderer'
 
 const config: Config = {
@@ -92,7 +93,14 @@ const config: Config = {
     },
   } satisfies ThemeConfig,
   themes: ['@docusaurus/theme-mermaid'],
-  plugins: ['docusaurus-plugin-structurizr'],
+  plugins: [
+    [
+      'docusaurus-plugin-structurizr',
+      {
+        enabled: !process.env.CI,
+      } satisfies DocusaurusPluginStructurizrOptions,
+    ],
+  ],
   markdown: {
     mermaid: true,
   },
