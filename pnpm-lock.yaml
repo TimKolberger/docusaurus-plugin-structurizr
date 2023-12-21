@@ -97,7 +97,7 @@ importers:
         specifier: 20.10.5
         version: 20.10.5
       raw-loader:
-        specifier: ^4.0.2
+        specifier: 4.0.2
         version: 4.0.2(webpack@5.89.0)
 
   packages/docusaurus-plugin-structurizr:
