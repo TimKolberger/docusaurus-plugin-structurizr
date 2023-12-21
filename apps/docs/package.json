@@ -16,17 +16,21 @@
   "dependencies": {
     "@docusaurus/core": "3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
+    "@docusaurus/theme-mermaid": "3.0.1",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "docusaurus-plugin-structurizr": "workspace:*",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
-    "@docusaurus/types": "3.0.1"
+    "@docusaurus/tsconfig": "3.0.1",
+    "@docusaurus/types": "3.0.1",
+    "raw-loader": "^4.0.2"
   },
   "browserslist": {
     "production": [

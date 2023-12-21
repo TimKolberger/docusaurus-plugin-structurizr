@@ -1,0 +1,17 @@
+import diagramSource from '!!raw-loader!./AmazonWebServicesDeployment.dsl'
+import awsMermaid from '!!raw-loader!./structurizr-AmazonWebServicesDeployment.mmd'
+import CodeBlock from '@theme/CodeBlock'
+import Mermaid from '@theme/Mermaid'
+
+# Examples
+
+<details>
+<summary>Expand to see structurizr source</summary>
+
+<CodeBlock className="language-mermaid" metastring="mermaid">
+  {diagramSource}
+</CodeBlock>
+
+</details>
+
+<Mermaid value={awsMermaid} />
