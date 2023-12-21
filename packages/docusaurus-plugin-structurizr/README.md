@@ -70,6 +70,10 @@ export default {
 }
 ```
 
+## Documentation
+
+See https://timkolberger.github.io/docusaurus-plugin-structurizr/ for the full documentation.
+
 ## Usage
 
 The plugin will look for files with `.dsl` extension and will generate a diagram for each file. The
