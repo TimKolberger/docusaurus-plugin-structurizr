@@ -1,6 +1,7 @@
 {
   "extends": "@dps/typescript-config/base.json",
   "compilerOptions": {
+    "noEmit": false,
     "outDir": "dist"
   },
   "include": ["src"],

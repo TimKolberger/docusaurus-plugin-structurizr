@@ -3,44 +3,43 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
-
-import { themes as prismThemes } from "prism-react-renderer";
+import { themes as prismThemes } from 'prism-react-renderer'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "timkolberger", // Usually your GitHub org/user name.
-  projectName: "docusaurus-plugin-structurizr", // Usually your repo name.
+  organizationName: 'timkolberger', // Usually your GitHub org/user name.
+  projectName: 'docusaurus-plugin-structurizr', // Usually your repo name.
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -50,61 +49,61 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: "My Site",
+        title: 'My Site',
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: 'My Site Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
-            to: "/docs",
-            label: "Docs",
-            position: "left",
+            to: '/docs',
+            label: 'Docs',
+            position: 'left',
           },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         links: [
           {
-            title: "Docs",
+            title: 'Docs',
             items: [
               {
-                label: "Tutorial",
-                to: "/docs",
+                label: 'Tutorial',
+                to: '/docs',
               },
             ],
           },
           {
-            title: "Community",
+            title: 'Community',
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
           {
-            title: "More",
+            title: 'More',
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
@@ -116,6 +115,6 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-};
+}
 
-export default config;
+export default config

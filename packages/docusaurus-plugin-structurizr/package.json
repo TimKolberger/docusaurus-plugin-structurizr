@@ -1,21 +1,30 @@
 {
-  "name": "docusaurus-plugin-structurizer",
+  "name": "docusaurus-plugin-structurizr",
   "version": "0.0.0",
-  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint . --max-warnings 0",
-    "lint:types": "tsc --noEmit",
-    "lint:format": "prettier --check ."
+    "lint:format": "prettier --check --config ../../package.json .",
+    "lint:types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@docusaurus/types": "3.0.1",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
+    "@types/node": "20.10.5",
     "concurrently": "8.2.2",
     "eslint": "^8.53.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "joi": "^17.11.0"
+    "@docusaurus/utils-validation": "^3.0.1",
+    "globby": "^14.0.0"
   }
 }
