@@ -1,0 +1,21 @@
+name: Quality Assurance
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install modules
+        uses: ./.github/composite-actions/install
+
+      - name: Run linters
+        run: pnpm lint
+
+      - name: Build all packages and docs
+        run: pnpm build:docs
