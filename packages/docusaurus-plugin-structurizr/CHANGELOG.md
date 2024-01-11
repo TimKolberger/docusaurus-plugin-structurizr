@@ -1,5 +1,14 @@
 # docusaurus-plugin-structurizr
 
+## 0.3.0
+
+### Minor Changes
+
+- [#26](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/26)
+  [`107eaed`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/107eaedb7f109431b24b531cf40f45cd2eda0080)
+  Thanks [@renovate](https://github.com/apps/renovate)! - Add support for docusaurus v3.1 by moving
+  @docusaurus/utils-validation to peer dependencies.
+
 ## 0.2.0
 
 ### Minor Changes
