@@ -105,9 +105,6 @@ importers:
 
   packages/docusaurus-plugin-structurizr:
     dependencies:
-      '@docusaurus/utils-validation':
-        specifier: ^3.0.1
-        version: 3.1.0(@docusaurus/types@3.1.0)
       globby:
         specifier: ^11.1.0
         version: 11.1.0
@@ -115,6 +112,9 @@ importers:
       '@docusaurus/types':
         specifier: 3.1.0
         version: 3.1.0(react-dom@18.2.0)(react@18.2.0)
+      '@docusaurus/utils-validation':
+        specifier: 3.1.0
+        version: 3.1.0(@docusaurus/types@3.1.0)
       '@dps/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint-config

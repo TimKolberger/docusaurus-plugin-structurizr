@@ -47,6 +47,7 @@ const config: Config = {
     navbar: {
       title: 'Docusaurus Plugin Structurizr',
       logo: {
+        href: '/docs',
         alt: 'Docusaurus Plugin Structurizr Logo',
         src: 'img/logo.svg',
       },
