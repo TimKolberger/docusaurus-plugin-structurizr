@@ -52,7 +52,7 @@
     "@docusaurus/utils-validation": "3.1.0",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
-    "@types/node": "20.11.1",
+    "@types/node": "20.11.2",
     "@vitest/coverage-v8": "1.2.0",
     "typescript": "5.3.3",
     "vitest": "1.2.0"
