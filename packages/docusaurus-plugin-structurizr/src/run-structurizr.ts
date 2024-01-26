@@ -9,18 +9,18 @@ import type { InternalDocusaurusPluginStructurizrOptions } from './validate-opti
  */
 export async function runStructurizr(
   file: string,
+  docsPath: string,
   options: Pick<
     InternalDocusaurusPluginStructurizrOptions,
     'executor' | 'dockerImage' | 'format' | 'additionalStructurizrArgs'
   >,
 ) {
   const { format, additionalStructurizrArgs, executor, dockerImage } = options
-  const directory = path.dirname(file)
-  const fileName = path.basename(file)
+  const fileName = path.relative(docsPath, file)
 
   const executorMap = {
     docker: [
-      `docker run --rm -v "${directory}:/usr/local/structurizr" ${dockerImage} export -workspace "${fileName}"`,
+      `docker run --rm -v "${docsPath}:/usr/local/structurizr" ${dockerImage} export -workspace "${fileName}"`,
       additionalStructurizrArgs,
     ]
       .filter(Boolean)
