@@ -61,6 +61,7 @@ const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   executor: Joi.string().valid('docker', 'cli', 'auto').default('auto'),
   dockerImage: Joi.string().default('structurizr/cli'),
   additionalStructurizrArgs: Joi.string().default(''),
+  ignoreDSLFilesGlob: Joi.string().default('/**/include.*.dsl'),
 })
 
 export function validateOptions({

@@ -19,7 +19,15 @@ export async function docusaurusPluginStructurizr(
   context: LoadContext,
   options: InternalDocusaurusPluginStructurizrOptions,
 ): Promise<Plugin> {
-  const { enabled, paths = [], format, executor, dockerImage, additionalStructurizrArgs } = options
+  const {
+    enabled,
+    paths = [],
+    format,
+    executor,
+    dockerImage,
+    additionalStructurizrArgs,
+    ignoreDSLFilesGlob,
+  } = options
 
   if (!enabled) {
     return {
@@ -34,13 +42,16 @@ export async function docusaurusPluginStructurizr(
     return `${resolvedPath}/**/*.dsl`
   })
 
+  // exclude "include" files
+  contentPaths.push(`!${context.siteDir}${ignoreDSLFilesGlob}`)
+
   return {
     name: PLUGIN_NAME,
     async loadContent() {
       const files = await findFiles(contentPaths)
       const results = await Promise.allSettled(
         files.map((file) =>
-          runStructurizr(file, {
+          runStructurizr(file, context.siteDir, {
             executor: detectedExecutor,
             dockerImage,
             format,
