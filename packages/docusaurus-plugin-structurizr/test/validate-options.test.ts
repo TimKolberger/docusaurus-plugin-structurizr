@@ -17,6 +17,7 @@ describe('validate options', () => {
         "executor": "auto",
         "format": "mermaid",
         "id": "default",
+        "ignoreDSLFilesGlob": "/**/include.*.dsl",
         "paths": [
           "docs",
         ],
@@ -28,6 +29,7 @@ describe('validate options', () => {
     const result = validateOptions({
       validate: normalizePluginOptions,
       options: {
+        ignoreDSLFilesGlob: 'overridden',
         additionalStructurizrArgs: 'overridden',
         dockerImage: 'overridden',
         enabled: false,
@@ -45,6 +47,7 @@ describe('validate options', () => {
         "executor": "cli",
         "format": "plantuml",
         "id": "overridden",
+        "ignoreDSLFilesGlob": "overridden",
         "paths": [
           "overridden1",
           "overridden2",
