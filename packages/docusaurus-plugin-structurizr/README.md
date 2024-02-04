@@ -57,6 +57,7 @@ export default {
         executor: 'auto', // "docker" | "cli" | "auto",
         dockerImage: 'structurizr/cli', // see https://hub.docker.com/r/structurizr/cli
         additionalStructurizrArgs: undefined, // string
+        ignorePatterns: ['/**/include.*.dsl'], // automatically exclude import files (eg: !import ../common/import.actors.dsl)
       },
     ],
   ],
