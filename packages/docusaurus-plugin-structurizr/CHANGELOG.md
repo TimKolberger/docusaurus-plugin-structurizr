@@ -1,5 +1,17 @@
 # docusaurus-plugin-structurizr
 
+## 0.4.0
+
+### Minor Changes
+
+- [#76](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/76)
+  [`c7f4514`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/c7f451423bbd873ff0a55108c8f9ddeab8823ba0)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Added the option property
+  `ignorePatterns` of type `string[]` to ignore files and directories from being processed by the
+  plugin.
+
+  It defaults to `['/**/include.*.dsl']` to ignore include files from being processed.
+
 ## 0.3.0
 
 ### Minor Changes
