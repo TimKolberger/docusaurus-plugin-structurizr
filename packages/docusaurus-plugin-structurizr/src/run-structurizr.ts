@@ -12,15 +12,14 @@ export async function runStructurizr(
   options: Pick<
     InternalDocusaurusPluginStructurizrOptions,
     'executor' | 'dockerImage' | 'format' | 'additionalStructurizrArgs'
-  >,
+  > & { docsPath: string },
 ) {
-  const { format, additionalStructurizrArgs, executor, dockerImage } = options
-  const directory = path.dirname(file)
-  const fileName = path.basename(file)
+  const { format, docsPath, additionalStructurizrArgs, executor, dockerImage } = options
+  const fileName = path.relative(docsPath, file)
 
   const executorMap = {
     docker: [
-      `docker run --rm -v "${directory}:/usr/local/structurizr" ${dockerImage} export -workspace "${fileName}"`,
+      `docker run --rm -v "${docsPath}:/usr/local/structurizr" ${dockerImage} export -workspace "${fileName}"`,
       additionalStructurizrArgs,
     ]
       .filter(Boolean)

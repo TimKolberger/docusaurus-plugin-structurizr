@@ -49,6 +49,12 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
    * @default ''
    */
   additionalStructurizrArgs?: string
+
+  /**
+   * Patterns to ignore when searching for diagrams
+   * @default ['/**\/include.*.dsl']
+   */
+  ignorePatterns?: string[]
 }
 
 export type InternalDocusaurusPluginStructurizrOptions =
@@ -61,6 +67,7 @@ const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   executor: Joi.string().valid('docker', 'cli', 'auto').default('auto'),
   dockerImage: Joi.string().default('structurizr/cli'),
   additionalStructurizrArgs: Joi.string().default(''),
+  ignorePatterns: Joi.array().items(Joi.string()).default(['/**/include.*.dsl']),
 })
 
 export function validateOptions({

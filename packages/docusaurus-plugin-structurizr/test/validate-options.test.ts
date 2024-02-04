@@ -17,6 +17,9 @@ describe('validate options', () => {
         "executor": "auto",
         "format": "mermaid",
         "id": "default",
+        "ignorePatterns": [
+          "/**/include.*.dsl",
+        ],
         "paths": [
           "docs",
         ],
@@ -28,6 +31,7 @@ describe('validate options', () => {
     const result = validateOptions({
       validate: normalizePluginOptions,
       options: {
+        ignorePatterns: ['overridden'],
         additionalStructurizrArgs: 'overridden',
         dockerImage: 'overridden',
         enabled: false,
@@ -45,6 +49,9 @@ describe('validate options', () => {
         "executor": "cli",
         "format": "plantuml",
         "id": "overridden",
+        "ignorePatterns": [
+          "overridden",
+        ],
         "paths": [
           "overridden1",
           "overridden2",

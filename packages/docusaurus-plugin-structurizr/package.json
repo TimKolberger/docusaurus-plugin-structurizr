@@ -38,6 +38,7 @@
     "directory": "packages/docusaurus-plugin-structurizr"
   },
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "tsc",
     "dev": "tsc --watch",
     "lint": "concurrently pnpm:lint:*",
@@ -54,6 +55,7 @@
     "@dps/typescript-config": "workspace:*",
     "@types/node": "20.11.16",
     "@vitest/coverage-v8": "1.2.2",
+    "rimraf": "5.0.5",
     "typescript": "5.3.3",
     "vitest": "1.2.2"
   },
