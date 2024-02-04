@@ -1,5 +1,12 @@
 # docusaurus-plugin-structurizr
 
+## 0.4.1
+
+### Patch Changes
+
+- [`3e09c42`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/3e09c426623838e52be4cc90295c0c39f2dfe265)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Updated Readme to document all options.
+
 ## 0.4.0
 
 ### Minor Changes
