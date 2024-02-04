@@ -15,6 +15,7 @@ const defaultOptions = {
   format: 'mermaid',
   id: 'default',
   paths: ['docs'],
+  ignorePatterns: ['**/include.*.dsl'],
 } satisfies DocusaurusPluginStructurizrOptions
 
 vi.mock('../src/detect-executor.js', async () => ({

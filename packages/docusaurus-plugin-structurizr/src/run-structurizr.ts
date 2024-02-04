@@ -9,13 +9,12 @@ import type { InternalDocusaurusPluginStructurizrOptions } from './validate-opti
  */
 export async function runStructurizr(
   file: string,
-  docsPath: string,
   options: Pick<
     InternalDocusaurusPluginStructurizrOptions,
     'executor' | 'dockerImage' | 'format' | 'additionalStructurizrArgs'
-  >,
+  > & { docsPath: string },
 ) {
-  const { format, additionalStructurizrArgs, executor, dockerImage } = options
+  const { format, docsPath, additionalStructurizrArgs, executor, dockerImage } = options
   const fileName = path.relative(docsPath, file)
 
   const executorMap = {

@@ -13,7 +13,8 @@ describe('run-structurizr', () => {
   })
 
   it('should run structurizr with cli', async () => {
-    await runStructurizr('some-file.dsl', '.', {
+    await runStructurizr('some-file.dsl', {
+      docsPath: '.',
       executor: 'cli',
       format: 'mermaid',
       dockerImage: 'structurizr/cli',
@@ -26,7 +27,8 @@ describe('run-structurizr', () => {
   })
 
   it('should run structurizr with docker', async () => {
-    await runStructurizr('some-file.dsl', '.', {
+    await runStructurizr('some-file.dsl', {
+      docsPath: '.',
       executor: 'docker',
       format: 'mermaid',
       dockerImage: 'structurizr/cli',
@@ -39,7 +41,8 @@ describe('run-structurizr', () => {
   })
 
   it('should run structurizr with docker mounted with the correct dir', async () => {
-    await runStructurizr('/some-folder/some-file.dsl', '/some-folder/', {
+    await runStructurizr('/some-folder/some-file.dsl', {
+      docsPath: '/some-folder/',
       executor: 'docker',
       format: 'mermaid',
       dockerImage: 'structurizr/cli',
@@ -53,7 +56,8 @@ describe('run-structurizr', () => {
 
   it('should throw if executor is unknown', async () => {
     expect(() =>
-      runStructurizr('some-file.dsl', '.', {
+      runStructurizr('some-file.dsl', {
+        docsPath: '.',
         // @ts-expect-error - intentionally invalid value
         executor: 'unknown',
         format: 'mermaid',
