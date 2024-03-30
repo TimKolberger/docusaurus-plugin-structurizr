@@ -26,7 +26,7 @@ jobs:
 
       - name: Setup Pages
         id: setup_pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Build docs
         env:
