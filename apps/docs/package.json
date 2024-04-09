@@ -35,7 +35,7 @@
     "@docusaurus/theme-classic": "3.2.1",
     "@docusaurus/tsconfig": "3.2.1",
     "@docusaurus/types": "3.2.1",
-    "@types/node": "20.12.5",
+    "@types/node": "20.12.6",
     "raw-loader": "4.0.2"
   },
   "browserslist": {
