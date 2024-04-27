@@ -55,6 +55,13 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
    * @default ['/**\/include.*.dsl']
    */
   ignorePatterns?: string[]
+
+  /**
+   * The output directory for the diagrams
+   * If not set, the diagrams will be generated in the same directory as the source file
+   * @default undefined
+   */
+  outputDir?: string
 }
 
 export type InternalDocusaurusPluginStructurizrOptions =
@@ -68,6 +75,7 @@ const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   dockerImage: Joi.string().default('structurizr/cli'),
   additionalStructurizrArgs: Joi.string().default(''),
   ignorePatterns: Joi.array().items(Joi.string()).default(['/**/include.*.dsl']),
+  outputDir: Joi.string().optional(),
 })
 
 export function validateOptions({

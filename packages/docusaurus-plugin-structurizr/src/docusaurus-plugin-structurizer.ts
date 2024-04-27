@@ -27,6 +27,7 @@ export async function docusaurusPluginStructurizr(
     dockerImage,
     additionalStructurizrArgs,
     ignorePatterns,
+    outputDir,
   } = options
 
   if (!enabled) {
@@ -59,6 +60,7 @@ export async function docusaurusPluginStructurizr(
             dockerImage,
             format,
             additionalStructurizrArgs,
+            outputDir,
           }),
         ),
       )
