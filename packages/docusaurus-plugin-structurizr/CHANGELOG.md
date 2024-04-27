@@ -1,5 +1,27 @@
 # docusaurus-plugin-structurizr
 
+## 0.5.0
+
+### Minor Changes
+
+- [#160](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/160)
+  [`f7562f3`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/f7562f381014db34c757698aa9956c7b5b777f68)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Support generating all diagrams in one
+  output directory.
+
+  By default, the option `outputDir` is `undefined` and all diagrams are generated in the same
+  directory as the source file.
+
+  Set `outputDir` to a string to generate all diagrams in a single directory relative to the
+  docusaurus project root.
+
+  ```js
+  const pluginOptions = {
+    // ...
+    outputDir: 'diagrams', // Generate all diagrams in a single directory. E.g. "diagrams".
+  }
+  ```
+
 ## 0.4.1
 
 ### Patch Changes
