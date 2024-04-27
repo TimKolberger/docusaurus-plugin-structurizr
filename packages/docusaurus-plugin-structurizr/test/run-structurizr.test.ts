@@ -1,3 +1,4 @@
+import path from 'node:path'
 import { expect } from 'vitest'
 
 import { exec } from '../src/exec.js'
@@ -66,6 +67,40 @@ describe('run-structurizr', () => {
       }),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
       `[Error: docusaurus-plugin-structurizr: Unknown executor: unknown]`,
+    )
+  })
+
+  it('should write files to output dir with executor docker', async () => {
+    const outputDir = 'my-output dir'
+    await runStructurizr('some-file.dsl', {
+      docsPath: '.',
+      executor: 'docker',
+      format: 'mermaid',
+      dockerImage: 'structurizr/cli',
+      additionalStructurizrArgs: '',
+      outputDir,
+    })
+
+    const resolvedPath = path.resolve(outputDir)
+    expect(exec).toHaveBeenCalledWith(
+      `docker run --rm -v ".:/usr/local/structurizr" -v "${resolvedPath}:/usr/local/output" structurizr/cli export -workspace "some-file.dsl" -output "/usr/local/output" -format "mermaid"`,
+    )
+  })
+
+  it('should write files to output dir with executor cli', async () => {
+    const outputDir = 'my-output dir'
+    await runStructurizr('some-file.dsl', {
+      docsPath: '.',
+      executor: 'cli',
+      format: 'mermaid',
+      dockerImage: '',
+      additionalStructurizrArgs: '',
+      outputDir,
+    })
+
+    const resolvedPath = path.resolve(outputDir)
+    expect(exec).toHaveBeenCalledWith(
+      `structurizr-cli export -workspace some-file.dsl -output "${resolvedPath}" -format "mermaid"`,
     )
   })
 })

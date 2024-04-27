@@ -12,19 +12,30 @@ export async function runStructurizr(
   options: Pick<
     InternalDocusaurusPluginStructurizrOptions,
     'executor' | 'dockerImage' | 'format' | 'additionalStructurizrArgs'
-  > & { docsPath: string },
+  > &
+    Partial<Pick<InternalDocusaurusPluginStructurizrOptions, 'outputDir'>> & { docsPath: string },
 ) {
-  const { format, docsPath, additionalStructurizrArgs, executor, dockerImage } = options
+  const { format, docsPath, additionalStructurizrArgs, executor, dockerImage, outputDir } = options
   const fileName = path.relative(docsPath, file)
+  const resolvedOutputDir = outputDir ? path.resolve(outputDir) : ''
 
   const executorMap = {
     docker: [
-      `docker run --rm -v "${docsPath}:/usr/local/structurizr" ${dockerImage} export -workspace "${fileName}"`,
+      `docker run --rm`,
+      `-v "${docsPath}:/usr/local/structurizr"`,
+      resolvedOutputDir ? `-v "${resolvedOutputDir}:/usr/local/output"` : null,
+      dockerImage,
+      `export -workspace "${fileName}"`,
+      resolvedOutputDir ? `-output "/usr/local/output"` : null,
       additionalStructurizrArgs,
     ]
       .filter(Boolean)
       .join(' '),
-    cli: [`structurizr-cli export -workspace ${file}`, additionalStructurizrArgs]
+    cli: [
+      `structurizr-cli export -workspace ${file}`,
+      resolvedOutputDir ? `-output "${resolvedOutputDir}"` : null,
+      additionalStructurizrArgs,
+    ]
       .filter(Boolean)
       .join(' '),
     auto: '',
