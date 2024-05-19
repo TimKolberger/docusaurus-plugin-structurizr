@@ -36,7 +36,8 @@
     "@docusaurus/tsconfig": "3.3.2",
     "@docusaurus/types": "3.3.2",
     "@types/node": "20.12.12",
-    "raw-loader": "4.0.2"
+    "raw-loader": "4.0.2",
+    "typescript": "5.4.5"
   },
   "browserslist": {
     "production": [
