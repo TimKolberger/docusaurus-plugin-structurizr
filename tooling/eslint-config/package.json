@@ -3,21 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "files": [
-    "library.cjs",
-    "next.js",
-    "react-internal.js"
+    "library.mjs"
   ],
   "scripts": {
     "lint": "concurrently pnpm:lint:*",
     "lint:format": "prettier --check ."
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "7.9.0",
-    "@typescript-eslint/parser": "7.9.0",
+    "@eslint/js": "9.3.0",
     "concurrently": "8.2.2",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-config-turbo": "1.13.3",
-    "eslint-plugin-only-warn": "1.1.0",
-    "typescript": "5.4.5"
+    "eslint-plugin-prettier": "5.1.3",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.9.0"
   }
 }
