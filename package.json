@@ -29,7 +29,7 @@
     "eslint": "9.3.0",
     "concurrently": "8.2.2"
   },
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "engines": {
     "node": ">=18"
   },
