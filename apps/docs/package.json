@@ -16,10 +16,10 @@
     "swizzle": "docusaurus swizzle"
   },
   "dependencies": {
-    "@docusaurus/core": "3.3.2",
-    "@docusaurus/plugin-client-redirects": "3.3.2",
-    "@docusaurus/preset-classic": "3.3.2",
-    "@docusaurus/theme-mermaid": "3.3.2",
+    "@docusaurus/core": "3.4.0",
+    "@docusaurus/plugin-client-redirects": "3.4.0",
+    "@docusaurus/preset-classic": "3.4.0",
+    "@docusaurus/theme-mermaid": "3.4.0",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@easyops-cn/docusaurus-search-local": "0.41.0",
@@ -31,10 +31,10 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2",
-    "@docusaurus/theme-classic": "3.3.2",
-    "@docusaurus/tsconfig": "3.3.2",
-    "@docusaurus/types": "3.3.2",
+    "@docusaurus/module-type-aliases": "3.4.0",
+    "@docusaurus/theme-classic": "3.4.0",
+    "@docusaurus/tsconfig": "3.4.0",
+    "@docusaurus/types": "3.4.0",
     "@types/node": "20.13.0",
     "raw-loader": "4.0.2",
     "typescript": "5.4.5"
