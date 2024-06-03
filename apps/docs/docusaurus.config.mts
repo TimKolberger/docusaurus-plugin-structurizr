@@ -3,6 +3,10 @@ import type { Config } from '@docusaurus/types'
 import type { DocusaurusPluginStructurizrOptions } from 'docusaurus-plugin-structurizr'
 import { themes as prismThemes } from 'prism-react-renderer'
 
+function addTrailingSlash(path: string) {
+  return path.endsWith('/') ? path : `${path}/`
+}
+
 const config: Config = {
   title: 'Docusaurus Plugin Structurizr',
   tagline: 'Use structurizr DSL files to generate diagrams in your Docusaurus site.',
@@ -12,7 +16,7 @@ const config: Config = {
   url: process.env.DOCS_URL || 'https://localhost:3000',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.DOCS_BASE_URL || '/',
+  baseUrl: addTrailingSlash(process.env.DOCS_BASE_URL) || '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
