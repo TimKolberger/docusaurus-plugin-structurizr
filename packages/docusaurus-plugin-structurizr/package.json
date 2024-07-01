@@ -56,7 +56,7 @@
     "@types/node": "20.14.9",
     "@vitest/coverage-v8": "1.6.0",
     "rimraf": "5.0.7",
-    "typescript": "5.5.2",
+    "typescript": "5.5.3",
     "vitest": "1.6.0"
   },
   "dependencies": {
