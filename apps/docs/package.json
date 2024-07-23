@@ -37,7 +37,7 @@
     "@docusaurus/types": "3.4.0",
     "@types/node": "20.14.11",
     "raw-loader": "4.0.2",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   },
   "browserslist": {
     "production": [
