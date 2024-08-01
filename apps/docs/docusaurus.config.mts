@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types'
 import type { DocusaurusPluginStructurizrOptions } from 'docusaurus-plugin-structurizr'
 import { themes as prismThemes } from 'prism-react-renderer'
 
-function addTrailingSlash(path: string) {
-  return path?.endsWith('/') ? path : `${path}/`
+function addTrailingSlash(path?: string) {
+  return path?.endsWith('/') ? path : `${path ?? ''}/`
 }
 
 const config: Config = {
