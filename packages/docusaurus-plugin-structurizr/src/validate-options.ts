@@ -33,7 +33,6 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
     | 'json'
     | 'ilograph'
     | 'websequencediagrams'
-    // eslint-disable-next-line @typescript-eslint/ban-types
     | (string & {})
   /**
    * The executor to use when generating diagrams

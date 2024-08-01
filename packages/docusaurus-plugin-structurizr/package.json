@@ -41,7 +41,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "concurrently pnpm:lint:*",
+    "lint": "pnpm \"/lint:/\"",
     "lint:eslint": "eslint . --max-warnings 0",
     "lint:format": "prettier --check .",
     "lint:types": "tsc --noEmit",
