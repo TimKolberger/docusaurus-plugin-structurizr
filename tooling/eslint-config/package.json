@@ -6,12 +6,11 @@
     "library.mjs"
   ],
   "scripts": {
-    "lint": "concurrently pnpm:lint:*",
+    "lint": "pnpm \"/lint:/\"",
     "lint:format": "prettier --check ."
   },
   "devDependencies": {
     "@eslint/js": "9.8.0",
-    "concurrently": "8.2.2",
     "eslint-plugin-prettier": "5.2.1",
     "typescript": "5.5.4",
     "typescript-eslint": "8.0.0"

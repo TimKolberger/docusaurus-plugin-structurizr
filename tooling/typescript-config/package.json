@@ -7,10 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "lint": "concurrently pnpm:lint:*",
+    "lint": "pnpm \"/lint:/\"",
     "lint:format": "prettier --check ."
-  },
-  "devDependencies": {
-    "concurrently": "8.2.2"
   }
 }

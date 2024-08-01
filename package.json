@@ -22,13 +22,12 @@
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "concurrently": "8.2.2",
     "eslint": "9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "9.1.4",
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
-    "turbo": "2.0.10"
+    "turbo": "2.0.11"
   },
   "packageManager": "pnpm@9.6.0",
   "engines": {

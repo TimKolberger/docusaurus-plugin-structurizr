@@ -13,14 +13,14 @@ export async function detectExecutor(executor: 'auto' | 'docker' | 'cli') {
   try {
     await exec('docker version')
     return 'docker'
-  } catch (error) {
+  } catch {
     logger.warn('docker not found or not started, falling back to cli')
   }
 
   try {
     await exec('structurizr-cli help')
     return 'cli'
-  } catch (error) {
+  } catch {
     logger.warn('structurizr-cli not found')
   }
 
