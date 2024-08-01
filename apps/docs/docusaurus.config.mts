@@ -110,7 +110,7 @@ const config: Config = {
         redirects: [
           {
             from: '/',
-            to: '/docs/',
+            to: 'docs/',
           },
         ],
       },
