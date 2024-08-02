@@ -53,7 +53,7 @@
     "@docusaurus/utils-validation": "3.4.0",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
-    "@types/node": "20.14.13",
+    "@types/node": "20.14.14",
     "@vitest/coverage-v8": "2.0.5",
     "rimraf": "6.0.1",
     "typescript": "5.5.4",
