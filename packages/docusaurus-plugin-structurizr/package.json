@@ -49,8 +49,8 @@
     "test:ci": "vitest --run --coverage"
   },
   "devDependencies": {
-    "@docusaurus/types": "3.5.1",
-    "@docusaurus/utils-validation": "3.5.1",
+    "@docusaurus/types": "3.5.2",
+    "@docusaurus/utils-validation": "3.5.2",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@types/node": "20.16.0",
