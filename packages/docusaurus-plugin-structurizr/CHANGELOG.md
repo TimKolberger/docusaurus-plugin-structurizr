@@ -1,5 +1,14 @@
 # docusaurus-plugin-structurizr
 
+## 0.5.1
+
+### Patch Changes
+
+- [#304](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/304)
+  [`99f32b8`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/99f32b860d9c45c49b194d2f4e7ea2f124d19269)
+  Thanks [@noobinthisgame](https://github.com/noobinthisgame)! - Added logging after plugin started
+  to improve usability.
+
 ## 0.5.0
 
 ### Minor Changes
