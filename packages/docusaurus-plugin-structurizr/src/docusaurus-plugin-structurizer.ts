@@ -52,6 +52,7 @@ export async function docusaurusPluginStructurizr(
     name: PLUGIN_NAME,
     async loadContent() {
       const files = await findFiles(contentPaths)
+      logger.info('Generating diagrams...')
       const results = await Promise.allSettled(
         files.map((file) =>
           runStructurizr(file, {
