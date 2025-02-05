@@ -22,7 +22,7 @@
     "@docusaurus/theme-mermaid": "3.7.0",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
-    "@easyops-cn/docusaurus-search-local": "0.48.4",
+    "@easyops-cn/docusaurus-search-local": "0.48.5",
     "@mdx-js/react": "3.1.0",
     "clsx": "2.1.1",
     "docusaurus-plugin-structurizr": "workspace:*",
