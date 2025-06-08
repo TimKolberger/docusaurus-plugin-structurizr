@@ -10,7 +10,7 @@
     "lint": "turbo lint",
     "test": "turbo test",
     "test:ci": "turbo test:ci",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "changeset publish",
     "release:dev": "changeset publish --tag dev",
     "version": "changeset version && pnpm run format",
