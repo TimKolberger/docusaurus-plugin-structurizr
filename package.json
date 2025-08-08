@@ -29,7 +29,7 @@
     "prettier": "3.6.2",
     "turbo": "2.5.5"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=18"
   },
