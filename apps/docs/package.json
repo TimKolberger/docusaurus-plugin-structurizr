@@ -35,7 +35,7 @@
     "@docusaurus/theme-classic": "3.9.1",
     "@docusaurus/tsconfig": "3.9.1",
     "@docusaurus/types": "3.9.1",
-    "@types/node": "22.18.9",
+    "@types/node": "22.18.10",
     "raw-loader": "4.0.2",
     "typescript": "5.9.3"
   },
