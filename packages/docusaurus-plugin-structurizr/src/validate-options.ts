@@ -41,7 +41,7 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
   executor?: 'docker' | 'cli' | 'auto'
   /**
    * The docker image to use when using the docker executor
-   * @default 'structurizr/cli'
+   * @default 'structurizr/structurizr'
    */
   dockerImage?: string
   /**
@@ -72,7 +72,7 @@ const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   paths: Joi.array().items(Joi.string()).default(['docs']),
   format: Joi.string().default('mermaid'),
   executor: Joi.string().valid('docker', 'cli', 'auto').default('auto'),
-  dockerImage: Joi.string().default('structurizr/cli'),
+  dockerImage: Joi.string().default('structurizr/structurizr'),
   additionalStructurizrArgs: Joi.string().default(''),
   ignorePatterns: Joi.array().items(Joi.string()).default(['/**/include.*.dsl']),
   outputDir: Joi.string().optional(),
