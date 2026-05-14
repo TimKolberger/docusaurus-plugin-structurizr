@@ -57,7 +57,7 @@ export default {
         paths: ['docs'],
         format: 'mermaid', // "mermaid" | "plantuml" | <structurizr-cli format: https://docs.structurizr.com/cli/export>
         executor: 'auto', // "docker" | "cli" | "auto",
-        dockerImage: 'structurizr/cli', // see https://hub.docker.com/r/structurizr/cli
+        dockerImage: 'structurizr/structurizr', // see https://hub.docker.com/r/structurizr/structurizr
         additionalStructurizrArgs: undefined, // string
         outputDir: undefined, // Generate all diagrams in a single directory. E.g. "diagrams".
         ignorePatterns: ['/**/include.*.dsl'], // automatically exclude import files (eg: !import ../common/import.actors.dsl)

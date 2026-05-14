@@ -10,7 +10,7 @@ import { runStructurizr } from '../src/run-structurizr.js'
 const defaultOptions = {
   enabled: true,
   additionalStructurizrArgs: '',
-  dockerImage: 'structurizr/cli',
+  dockerImage: 'structurizr/structurizr',
   executor: 'auto',
   format: 'mermaid',
   id: 'default',

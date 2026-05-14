@@ -18,7 +18,7 @@ describe('run-structurizr', () => {
       docsPath: '.',
       executor: 'cli',
       format: 'mermaid',
-      dockerImage: 'structurizr/cli',
+      dockerImage: 'structurizr/structurizr',
       additionalStructurizrArgs: '',
     })
 
@@ -32,12 +32,12 @@ describe('run-structurizr', () => {
       docsPath: '.',
       executor: 'docker',
       format: 'mermaid',
-      dockerImage: 'structurizr/cli',
+      dockerImage: 'structurizr/structurizr',
       additionalStructurizrArgs: '',
     })
 
     expect(exec).toHaveBeenCalledWith(
-      'docker run --rm -v ".:/usr/local/structurizr" structurizr/cli export -workspace "some-file.dsl" -format "mermaid"',
+      'docker run --rm -v ".:/usr/local/structurizr" structurizr/structurizr export -workspace "some-file.dsl" -format "mermaid"',
     )
   })
 
@@ -46,12 +46,12 @@ describe('run-structurizr', () => {
       docsPath: '/some-folder/',
       executor: 'docker',
       format: 'mermaid',
-      dockerImage: 'structurizr/cli',
+      dockerImage: 'structurizr/structurizr',
       additionalStructurizrArgs: '',
     })
 
     expect(exec).toHaveBeenCalledWith(
-      'docker run --rm -v "/some-folder/:/usr/local/structurizr" structurizr/cli export -workspace "some-file.dsl" -format "mermaid"',
+      'docker run --rm -v "/some-folder/:/usr/local/structurizr" structurizr/structurizr export -workspace "some-file.dsl" -format "mermaid"',
     )
   })
 
@@ -62,7 +62,7 @@ describe('run-structurizr', () => {
         // @ts-expect-error - intentionally invalid value
         executor: 'unknown',
         format: 'mermaid',
-        dockerImage: 'structurizr/cli',
+        dockerImage: 'structurizr/structurizr',
         additionalStructurizrArgs: '',
       }),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
@@ -76,14 +76,14 @@ describe('run-structurizr', () => {
       docsPath: '.',
       executor: 'docker',
       format: 'mermaid',
-      dockerImage: 'structurizr/cli',
+      dockerImage: 'structurizr/structurizr',
       additionalStructurizrArgs: '',
       outputDir,
     })
 
     const resolvedPath = path.resolve(outputDir)
     expect(exec).toHaveBeenCalledWith(
-      `docker run --rm -v ".:/usr/local/structurizr" -v "${resolvedPath}:/usr/local/output" structurizr/cli export -workspace "some-file.dsl" -output "/usr/local/output" -format "mermaid"`,
+      `docker run --rm -v ".:/usr/local/structurizr" -v "${resolvedPath}:/usr/local/output" structurizr/structurizr export -workspace "some-file.dsl" -output "/usr/local/output" -format "mermaid"`,
     )
   })
 

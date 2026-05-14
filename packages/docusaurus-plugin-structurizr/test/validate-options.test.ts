@@ -12,7 +12,7 @@ describe('validate options', () => {
     expect(result).toMatchInlineSnapshot(`
       {
         "additionalStructurizrArgs": "",
-        "dockerImage": "structurizr/cli",
+        "dockerImage": "structurizr/structurizr",
         "enabled": true,
         "executor": "auto",
         "format": "mermaid",
