@@ -1,5 +1,14 @@
 # docusaurus-plugin-structurizr
 
+## 0.6.0
+
+### Minor Changes
+
+- [`8ff71fa`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/8ff71fad4ffc7f8715813a5edc84ca257c48dde5)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Replaced deprecated docker image
+  [structurizr/cli](https://hub.docker.com/r/structurizr/cli) with
+  [structurizr/structurizr](https://hub.docker.com/r/structurizr/structurizr).
+
 ## 0.5.1
 
 ### Patch Changes
