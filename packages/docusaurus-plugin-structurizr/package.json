@@ -54,10 +54,10 @@
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@types/node": "24.13.3",
-    "@vitest/coverage-v8": "4.0.16",
+    "@vitest/coverage-v8": "4.1.10",
     "rimraf": "6.1.3",
     "typescript": "5.9.3",
-    "vitest": "4.1.0"
+    "vitest": "4.1.10"
   },
   "dependencies": {
     "globby": "^11.1.0"
