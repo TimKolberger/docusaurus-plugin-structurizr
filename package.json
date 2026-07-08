@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.7.0",
-    "@changesets/cli": "2.29.8",
+    "@changesets/cli": "2.31.0",
     "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "6.0.2",
