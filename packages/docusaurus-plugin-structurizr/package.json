@@ -57,7 +57,7 @@
     "@vitest/coverage-v8": "4.0.16",
     "rimraf": "6.1.2",
     "typescript": "5.9.3",
-    "vitest": "4.0.16"
+    "vitest": "4.1.0"
   },
   "dependencies": {
     "globby": "^11.1.0"
