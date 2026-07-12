@@ -1,5 +1,6 @@
-import type { LoadContext, Plugin } from '@docusaurus/types'
 import path from 'node:path'
+
+import type { LoadContext, Plugin } from '@docusaurus/types'
 
 import { detectExecutor } from './detect-executor.js'
 import { findFiles } from './find-files.js'

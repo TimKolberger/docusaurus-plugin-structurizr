@@ -6,7 +6,7 @@
     "build:docs": "turbo build:docs",
     "dev": "turbo dev",
     "docs": "pnpm --filter @dps/docs run dev",
-    "format": "prettier --write .",
+    "format": "oxfmt",
     "lint": "turbo lint",
     "test": "turbo test",
     "test:ci": "turbo test:ci",
@@ -19,44 +19,20 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.7.0",
     "@changesets/cli": "2.31.0",
-    "@dps/eslint-config": "workspace:*",
     "@dps/typescript-config": "workspace:*",
-    "@trivago/prettier-plugin-sort-imports": "6.0.2",
-    "eslint": "10.7.0",
-    "eslint-config-prettier": "^10.0.0",
     "husky": "9.1.7",
     "lint-staged": "17.0.8",
-    "prettier": "3.9.5",
+    "oxfmt": "latest",
+    "oxlint": "1.73.0",
     "turbo": "2.10.4"
-  },
-  "packageManager": "pnpm@10.34.5",
-  "engines": {
-    "node": ">=18"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "printWidth": 100,
-    "plugins": [
-      "@trivago/prettier-plugin-sort-imports"
-    ],
-    "importOrder": [
-      "^[./]"
-    ],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true,
-    "overrides": [
-      {
-        "files": "*.(md|mdx)",
-        "options": {
-          "proseWrap": "always"
-        }
-      }
-    ]
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx,md,mdx,yml,json}": [
-      "prettier --write"
+      "oxfmt --no-error-on-unmatched-pattern"
     ]
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.34.5"
 }

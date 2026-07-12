@@ -1,4 +1,5 @@
 import path from 'node:path'
+
 import { expect } from 'vitest'
 
 import { exec } from '../src/exec.js'
