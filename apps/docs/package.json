@@ -33,7 +33,6 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/theme-classic": "3.10.2",
-    "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@types/node": "24.13.3",
     "raw-loader": "4.0.2",
