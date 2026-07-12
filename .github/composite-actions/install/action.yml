@@ -4,8 +4,9 @@ description: 'Sets up Node.js and runs install'
 runs:
   using: composite
   steps:
-    - name: Install dependencies
-      uses: pnpm/action-setup@v6.0.9
+    - name: Enable corepack
+      shell: bash
+      run: corepack enable
 
     - name: Setup Node.js
       uses: actions/setup-node@v6
