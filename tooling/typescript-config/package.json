@@ -8,6 +8,6 @@
   },
   "scripts": {
     "lint": "pnpm \"/lint:/\"",
-    "lint:format": "prettier --check ."
+    "lint:format": "oxfmt --check"
   }
 }
