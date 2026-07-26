@@ -24,7 +24,7 @@
     "lint-staged": "17.1.1",
     "oxfmt": "latest",
     "oxlint": "1.75.0",
-    "turbo": "2.10.6"
+    "turbo": "2.10.7"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx,md,mdx,yml,json}": [
