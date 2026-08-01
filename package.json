@@ -21,7 +21,7 @@
     "@changesets/cli": "2.31.1",
     "@dps/typescript-config": "workspace:*",
     "husky": "9.1.7",
-    "lint-staged": "17.2.0",
+    "lint-staged": "17.3.0",
     "oxfmt": "latest",
     "oxlint": "1.76.0",
     "turbo": "2.10.7"
