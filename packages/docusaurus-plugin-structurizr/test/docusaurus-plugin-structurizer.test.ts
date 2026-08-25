@@ -11,16 +11,11 @@ const defaultOptions = {
   enabled: true,
   additionalStructurizrArgs: '',
   dockerImage: 'structurizr/structurizr',
-  executor: 'auto',
   format: 'mermaid',
   id: 'default',
   paths: ['docs'],
   ignorePatterns: ['**/include.*.dsl'],
 } satisfies DocusaurusPluginStructurizrOptions
-
-vi.mock('../src/detect-executor.js', async () => ({
-  detectExecutor: vi.fn(() => 'docker'),
-}))
 
 vi.mock('../src/run-structurizr.js', async () => ({
   runStructurizr: vi.fn(),
@@ -90,7 +85,7 @@ describe('docusaurus-plugin-structurizr', () => {
       defaultOptions,
     )
 
-    expect(plugin.loadContent?.()).resolves.not.toThrow()
+    await expect(plugin.loadContent?.()).resolves.not.toThrow()
   })
 
   it('should watch paths', async () => {

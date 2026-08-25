@@ -2,7 +2,6 @@ import path from 'node:path'
 
 import type { LoadContext, Plugin } from '@docusaurus/types'
 
-import { detectExecutor } from './detect-executor.js'
 import { findFiles } from './find-files.js'
 import { PLUGIN_NAME } from './globals.js'
 import { logger } from './logger.js'
@@ -11,7 +10,7 @@ import type { InternalDocusaurusPluginStructurizrOptions } from './validate-opti
 
 /**
  * Docusaurus plugin to generate diagrams from structurizr DSL files.
- * This plugin requires structurizr-cli or docker to be installed.
+ * This plugin requires docker to be installed.
  *
  * @see https://docs.structurizr.com/
  * @returns {import("@docusaurus/types").Plugin}
@@ -24,7 +23,6 @@ export async function docusaurusPluginStructurizr(
     enabled,
     paths = [],
     format,
-    executor,
     dockerImage,
     additionalStructurizrArgs,
     ignorePatterns,
@@ -36,8 +34,6 @@ export async function docusaurusPluginStructurizr(
       name: PLUGIN_NAME,
     }
   }
-
-  const detectedExecutor = await detectExecutor(executor)
 
   const contentPaths = paths
     .map((contentPath) => {
@@ -58,7 +54,6 @@ export async function docusaurusPluginStructurizr(
         files.map((file) =>
           runStructurizr(file, {
             docsPath: context.siteDir,
-            executor: detectedExecutor,
             dockerImage,
             format,
             additionalStructurizrArgs,

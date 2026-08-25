@@ -35,17 +35,12 @@ export type DocusaurusPluginStructurizrOptions = PluginOptions & {
     | 'websequencediagrams'
     | (string & {})
   /**
-   * The executor to use when generating diagrams
-   * @default 'auto'
-   */
-  executor?: 'docker' | 'cli' | 'auto'
-  /**
-   * The docker image to use when using the docker executor
+   * The docker image to use for Docker
    * @default 'structurizr/structurizr'
    */
   dockerImage?: string
   /**
-   * Additional arguments to pass to the structurizr CLI
+   * Additional arguments to pass to the Structurizr Docker invocation
    * @default ''
    */
   additionalStructurizrArgs?: string
@@ -71,7 +66,6 @@ const Schema = Joi.object<DocusaurusPluginStructurizrOptions>({
   enabled: Joi.boolean().default(true),
   paths: Joi.array().items(Joi.string()).default(['docs']),
   format: Joi.string().default('mermaid'),
-  executor: Joi.string().valid('docker', 'cli', 'auto').default('auto'),
   dockerImage: Joi.string().default('structurizr/structurizr'),
   additionalStructurizrArgs: Joi.string().default(''),
   ignorePatterns: Joi.array().items(Joi.string()).default(['/**/include.*.dsl']),
