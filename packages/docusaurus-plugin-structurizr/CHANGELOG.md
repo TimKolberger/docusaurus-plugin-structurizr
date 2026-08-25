@@ -1,5 +1,37 @@
 # docusaurus-plugin-structurizr
 
+## 1.0.0
+
+### Major Changes
+
+- [#934](https://github.com/TimKolberger/docusaurus-plugin-structurizr/pull/934)
+  [`f8af96b`](https://github.com/TimKolberger/docusaurus-plugin-structurizr/commit/f8af96bd1de8b99ae4bdddcf939f9c6bcfbc4f20)
+  Thanks [@hmyg52](https://github.com/hmyg52)! - Removed support for the
+  [deprecated Structurizr CLI](https://docs.structurizr.com/cli).
+
+  **Docker is now the only supported executor.**
+
+  To migrate, remove the plugin option `executor`:
+
+  ```diff title="docusaurus.config.js"
+  export default {
+    // ...
+    plugins: [
+      [
+        'docusaurus-plugin-structurizr',
+        {
+          enabled: true,
+          paths: ['docs'],
+          format: 'mermaid',
+  -        executor: 'auto',
+          dockerImage: 'structurizr/structurizr',
+        },
+      ],
+    ],
+  // ...
+  }
+  ```
+
 ## 0.6.0
 
 ### Minor Changes

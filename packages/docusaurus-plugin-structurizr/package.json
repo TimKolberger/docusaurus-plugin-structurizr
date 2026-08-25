@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-structurizr",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "description": "This plugin allows you to use structurizr diagrams in your docusaurus documentation.",
   "keywords": [
     "diagrams",
