@@ -32,9 +32,9 @@ This plugin allows you to use [Structurizr](https://structurizr.com/) diagrams i
 
 > [!NOTE]
 >
-> This plugin requires `structurizr-cli` or `docker` to be installed on your machine!
+> This plugin requires `docker` to be installed on your machine!
 >
-> See [Structurizr installation docs](https://docs.structurizr.com/cli/installation).
+> See [Docker installation docs](https://docs.docker.com/get-docker/).
 
 Add the plugin to your Docusaurus project. If you want to use mermaid diagrams in your markdown
 files, you also need to install the official mermaid theme.
@@ -55,8 +55,7 @@ export default {
       {
         enabled: true,
         paths: ['docs'],
-        format: 'mermaid', // "mermaid" | "plantuml" | <structurizr-cli format: https://docs.structurizr.com/cli/export>
-        executor: 'auto', // "docker" | "cli" | "auto",
+        format: 'mermaid', // "mermaid" | "plantuml" | <Structurizr export format: https://docs.structurizr.com/cli/export>
         dockerImage: 'structurizr/structurizr', // see https://hub.docker.com/r/structurizr/structurizr
         additionalStructurizrArgs: undefined, // string
         outputDir: undefined, // Generate all diagrams in a single directory. E.g. "diagrams".
@@ -96,8 +95,7 @@ import Mermaid from '@theme/Mermaid'
 
 ### CI environments
 
-If you want to use this plugin in your CI pipeline, you need to install `structurizr-cli` or
-`docker` on your CI machine.
+If you want to use this plugin in your CI pipeline, you need to install `docker` on your CI machine.
 
 If that is not possible, you can opt out of using the plugin in CI by setting the `enabled` option
 to `false`. Make sure to commit your generated diagrams to your repository.

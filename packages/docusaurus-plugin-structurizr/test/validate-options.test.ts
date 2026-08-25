@@ -1,5 +1,5 @@
 import { normalizePluginOptions } from '@docusaurus/utils-validation'
-import { expect } from 'vitest'
+import { expect, it, describe } from 'vitest'
 
 import { validateOptions } from '../src/index.js'
 
@@ -14,7 +14,6 @@ describe('validate options', () => {
         "additionalStructurizrArgs": "",
         "dockerImage": "structurizr/structurizr",
         "enabled": true,
-        "executor": "auto",
         "format": "mermaid",
         "id": "default",
         "ignorePatterns": [
@@ -35,7 +34,6 @@ describe('validate options', () => {
         additionalStructurizrArgs: 'overridden',
         dockerImage: 'overridden',
         enabled: false,
-        executor: 'cli',
         format: 'plantuml',
         id: 'overridden',
         paths: ['overridden1', 'overridden2'],
@@ -46,7 +44,6 @@ describe('validate options', () => {
         "additionalStructurizrArgs": "overridden",
         "dockerImage": "overridden",
         "enabled": false,
-        "executor": "cli",
         "format": "plantuml",
         "id": "overridden",
         "ignorePatterns": [
