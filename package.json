@@ -23,7 +23,7 @@
     "husky": "9.1.7",
     "lint-staged": "17.4.1",
     "oxfmt": "latest",
-    "oxlint": "1.80.0",
+    "oxlint": "1.81.0",
     "turbo": "2.10.12"
   },
   "lint-staged": {
