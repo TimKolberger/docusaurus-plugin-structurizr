@@ -33,7 +33,7 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/theme-classic": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "raw-loader": "4.0.2",
     "typescript": "7.0.2"
   },
