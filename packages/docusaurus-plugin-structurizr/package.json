@@ -56,10 +56,10 @@
     "@docusaurus/utils-validation": "3.10.2",
     "@dps/typescript-config": "workspace:*",
     "@types/node": "26.6.10",
-    "@vitest/coverage-v8": "5.1.1",
+    "@vitest/coverage-v8": "5.1.2",
     "rimraf": "6.1.4",
     "typescript": "7.0.2",
-    "vitest": "5.1.1"
+    "vitest": "5.1.2"
   },
   "peerDependencies": {
     "@docusaurus/utils-validation": ">3.0.1"
